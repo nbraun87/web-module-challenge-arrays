@@ -28,8 +28,38 @@ var originalFlavors = ["Banana Nut Fudge",
     "Rocky Road",
     "Strawberry",
     "Vanilla",
-    "Vanilla Burnt Almond"]
+    "Vanilla Burnt Almond"];
 
+console.log("test");
+var array2 = [];
+var array3 = [];//new Array(31);
+var array4;
+function copy(array1, flavors)
+{
+	//array1 = flavors.slice(0);
+	for(var i = 0; i < flavors.length; i++)
+	{
+		array1.push(flavors[i]);
+		console.log(i);
+	}
+	console.log("from within the function");
+	console.log(array1);
+	return array1;
+}
+array2 = originalFlavors.slice(0);
+//copy(array3, originalFlavors);
+array3 = copy(array3, originalFlavors);
+//array4 = copya(array4, originalFlavors);
+
+//array = originalFlavors.slice(0);
+console.log("original ");
+console.log(originalFlavors);
+console.log("outside copy: ");
+console.log(array2);
+console.log("function copy: ");
+console.log(array3);
+//console.log("function copy: ");
+//console.log(array4);
 /* Task 1: Confirm that the array is exactly 31 flavors. Your function should accept:
 
 (1) an array 
@@ -123,11 +153,11 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(/*code here*/){
+//function copy(/*code here*/){
 
     /*code here*/
 
-}
+//}
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
